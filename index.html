@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>7-Segment Display Calculator</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <hgroup>
+            <h2>7-Segment Display Calculator</h2>
+            <p>Hex, decimal and binary calculator</p>
+          </hgroup>
+
+
+        <form onsubmit="return calculate(event)">
+            <fieldset role="group">
+                <input type="text" id="text" maxlength="1" placeholder="Please enter a character" required />
+                <button type="submit"> Calculate </button>
+            </fieldset>
+        </form>
+
+        <article id="result">
+                <header>Results for (<b class="typedNumber"></b>)</header>
+
+                <div class="grid">
+                    <div>
+                        <table class="striped">
+                            <tr>
+                                <td>HEX</td>
+                                <td id="hexadecimal"></td>
+                            </tr>
+                            <tr>
+                                <td>DECIMAL</td>
+                                <td id="decimal"></td>
+                            </tr>
+                            <tr>
+                                <td>BINARY</td>
+                                <td id="binary"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+
+                        <div id="display-screen">
+                            <div class="display-screen-line">
+                                <div class="vertical" data-binary="2"></div>
+                                <div class="horizontal" data-binary="7"></div>
+                                <div class="vertical end" data-binary="6"></div>
+                            </div>
+                            <div class="display-screen-line">
+                                <div class="vertical" data-binary="3"></div>
+                                <div class="horizontal" data-binary="1"></div>
+                                <div class="vertical end" data-binary="5"></div>
+                            </div>
+                            <div class="display-screen-line">
+                                <div class="horizontal" data-binary="4"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </article>
+
+        <article id="err">
+            <p>Undefined character, please try another one.</p>
+        </article>
+
+        <p>I developed this calculator in 2013 because it would be helpful in a course I took as a student in the computer engineering department. In 2024, I made some simple changes and published it on GitHub commemoratively.</p>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./main.js"></script>
+
+</body>
+
+
+</html>
